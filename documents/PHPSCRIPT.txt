@@ -1,0 +1,173 @@
+phpinfo(); // to get the information of php version
+
+echo nl2br("stuff \n"); // to use \for new lines
+
+empty($variable); to check if the variable is empty
+
+//whether ip is from share internet
+$_SERVER['HTTP_CLIENT_IP'] // get the client ip
+//whether ip is from proxy
+$_SERVER['HTTP_X_FORWARDED_FOR'] // get the client ip
+//whether ip is from remote address
+$_SERVER['REMOTE_ADDR'] // get the client ip
+$_SERVER['HTTP_USER_AGENT'] // get the user browser detection
+
+$_SERVER['PHP_SELF'] // get the current file path
+basename($_SERVER['PHP_SELF']) // get current file name
+
+$url = parse_url(any url you want) // get the components of url given
+$url['scheme'] // return the scheme
+$url['host'] // return the host
+$url['path'] // return the path
+
+preg_split('/pattern/',subject); return array of splitted elements based on the pattern you give;
+preg_replace('/pattern/','replacement',subject);
+
+preg_match('/pattern you need to match with subject/',subject); // return true or false
+$	Matches pattern at the end of the string
+^	Matches the beginning of or string / excludes characters
+"'/.../'" starts and ends the regular expression
+"^[a-zA-Z0-9._-]" matches any lower or upper case letters, numbers between 0 and 9 and dots, underscores or dashes.
+"+@[a-zA-Z0-9-]" matches the @ symbol followed by lower or upper case letters, numbers between 0 and 9 or dashes.
+"+\.[a-zA-Z.]{2,5}$/" escapes the dot using the backslash then matches any lower or upper case letters with a character length between 2 and 5 at the end of the string.
+
+preg_replace('/(\b[a-z])/i','<span style="color:red;">\1</span>',$text); // replace each first character of word with the red color
+
+print_r($array or $string or something) // prints all array elements
+
+$_SERVER['HTTPS'] // will not be empty if the script was queried throught the https protocol;
+
+header("Location: some_link_or_site_or_url"); // redirect to another page
+
+filter_var($email, FILTER_VALIDATE_EMAIL) // return true if the $email is valid email address
+
+echo "<table> </table>" // you can do any html css code inside the echo function
+
+foreach($name_of_array as $index => $value) // this is foreach loop
+
+htmlspecialchars($some_html_chars) // this does not execute the html characters and tags
+
+echo "this number {$number}";// print value of $number without {}
+
+file ('file_name Or file_url'); // reads a file into array each element contain a line
+
+$conn = mysqli_connect('server','admin','pwd','database'); // here the $conn is boolean
+to check if the connection successful use
+if($conn == true)
+
+$_SESSION['username'] = $username;// to create session variable, and to use the variable on every page in the website, every page must have session_start() function.
+
+ /*Create a file
+    $myfile = "file.txt";
+    fopen($myfile,'w'); // 'w' means for writing in the file
+    */
+
+    /* write into the file
+    $myfile = "file.doc"; // specify the file name
+    $handle = fopen($myfile,'w');
+    $data = "We are learning php";
+    fwrite($handle,$data);
+    */
+
+    /* update the file
+    $myfile = "file.txt";
+    $handle = fopen($myfile,'a'); // 'a' means append
+    $data = " step by step";
+    fwrite($handle,$data);
+    */
+
+    /* delete the file
+    $myfile = 'file.txt';
+    unlink($myfile);
+    */
+    /*
+    filesize("ppp.txt"); // get the size of the specific file
+    fclose($myfile); // close the file
+    */
+
+//current Date, i.e. 2013-08-01
+   echo date("Y-m-d");
+
+//current Time in 12 hour format, i.e. 08:50:55pm
+   echo date("h:i:sa");
+
+$conn = mysqli_connect($server,$username,$password,$dbName);
+if(!$conn) echo mysqli_connect_error(); // this method throw the error if connection failed
+
+$data = trim($data); // remove extra spaces and new lines
+    $data = stripslashes($data); // remove slashes
+    $data = htmlspecialchars($data); // remove html symbols
+
+&copy; >> this gives the copy right symbol
+
+date("Y-m-d")
+date("Y/m/d")
+date("Y.m.d")
+date("l")
+date("Y")
+
+define('$dbserver', "localhost"); // we can define variables like this
+
+sleep(5) // this function stop the execution for 5 seconds;
+
+$d = 'ABC' ; ++$d ; // this increment the alphabit
+
+print_r(error_get_last()); // this print the last occured error
+
+function trinary_test($x){
+        $res = $x > 30 ? 'greater than 30' : ($x > 20 ? 'greater than 20' : ($x > 10 ? 'greater than 10' : 'input number at least greater than 10'));
+        echo $res . PHP_EOL;
+    }
+
+get_current_user() // function to get the script owner
+php_uname() // get the OS of the server, or we can use
+PHP_OS
+
+floor(1.2) // returns the number without the decimal point
+
+$x = 133; (string)$x // return $x as string
+(string)$x[0] // returns the first digit of the string and (string)$x[1] returns the second digit and so on
+
+pow($x,3) // x to the power 3
+
+$array = explode(';',$sentence); // return array of words of the sentence based on the ';' saparator you can change it
+
+$binary  = decbin($n) // return the binary number of $n decimal number
+
+$reverse = strrev($n); // returns the reverse of the given string
+
+array_unique($array); // remove duplicates from array
+
+print_r($array); // prints all the array along with its indexes
+
+unset($array[$index]) or unset($array) // this will remove values or remove the whole array
+
+we can compare 2 strings with == sign
+
+substr($string1 , substring-index , lengthOfString1); // return substring starting from specified index
+
+str_pad($i*$j,5," ",STR_PAD_RIGHT); // to print the string in this way 1    2    3    4    5    6
+                                                                       2    4    6    8    10   12
+                                                                       3    6    9    12   15   18
+                                                                       4    8    12   16   20   24
+                                                                       5    10   15   20   25   30
+                                                                       6    12   18   24   30   36
+
+count($array) // get the size of the array
+
+// file is opened using fopen() function
+$my_file = fopen("gfg.txt", "rw");
+// Prints a single line from the opened file pointer
+echo fgets($my_file);
+
+$x = (int)readline("enter an integer") // to read int, replace with float to read float
+
+define("DAYS_OF_THE_WEEK",array("SAT","SUN","MON","TUE","WED","THU","FRI"));
+    print_r(DAYS_OF_THE_WEEK); // this is constant
+
+$x = readline("Enter x: "); // this read $x from the console
+
+$file = readfile("somefile.txt"); // read some file along with # of its bytes
+
+feof($myfile) // function checks if the "end-of-file" (EOF) has been reached.
+fgetc($myfile) // function is used to read a single character from a file.

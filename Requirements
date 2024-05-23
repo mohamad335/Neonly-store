@@ -1,0 +1,29 @@
+1) Users can explore and browse for posters
+
+2) Users can click on a poster to transmitted to another page to see the full details of that poster
+
+3) In poster show page, users can type a text, select a font, select a color, and request similar poster with selected specification
+
+4) the artist (owner) can add poster along with its specification(font, color, category ...)
+
+5) artist(owner) dashboard will display a list of all posters requests and their specification (user name, phone number,selected features ...ext)
+
+
+Database:
+
+Sign:
+    id
+    Name
+    image
+    rate
+    color
+    prodate
+    featured
+    description
+
+request:
+    id
+    username
+    phone
+    email
+    sign

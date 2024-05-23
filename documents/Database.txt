@@ -1,0 +1,36 @@
+CREATE TABLE Products(
+	ID			INT			AUTO_INCREMENT	PRIMARY KEY		NOT NULL,
+    name1		VARCHAR(40)									NOT NULL,
+    name2		VARCHAR(40)									,
+    name3		VARCHAR(40)									,
+    name4		VARCHAR(40)									,
+    name5		VARCHAR(40)									,
+    price		DOUBLE 										NOT NULL,
+    rate		INT 										NOT NULL,
+    category 	VARCHAR(20) 								NOT NULL,
+    size		VARCHAR(5)									NOT NULL,
+    quantity	INT											NOT NULL,
+    details		VARCHAR(300)										,
+    prodate		date										NOT NULL,
+    featured	BOOLEAN							DEFAULT 0	NOT NULL
+);
+
+INSERT INTO products (name1, name2, name3, name4, name5, price, rate, category, size, quantity, details, prodate, featured)
+VALUES  ('product-5','','','','','40','4','T-shirt','Xl','20','Gray-White Shoe','2020-10-01','1'),
+        ('product-6','','','','','70','4','Shoe','l','10','Black Printed T-shirt','2020-02-11','1'),
+        ('product-7','','','','','50','3','T-shirt','Xl','50','HRX Cotton Socks','2020-02-01','1'),
+        ('product-8','','','','','100','5','T-shirt','Xl','50','Black Rolex Watch','2020-05-01','1')
+
+
+UPDATE products
+SET featured = '0'
+WHERE name1 = 'exclusive-1';
+
+
+CREATE TABLE Products(
+	ID		INT		NOT NULL
+);
+
+
+
+DELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';
